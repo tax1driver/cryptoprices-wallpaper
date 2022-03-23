@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap");
+html, body, #root, .app {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e;
+  color: #e4e0e0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box-vertical {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box-horizontal {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tick-pos {
+  color: #159f49;
+}
+
+.tick-neg {
+  color: #af3f3d;
+}
+
+.tick-zero {
+  color: #e4e0e0;
+}
+
+.break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 0;
+}
+
+.break-gently {
+  width: 100%;
+  height: 0;
+}
+
+.symbol {
+  width: 400px;
+  height: 150px;
+  padding: 15px;
+  margin: 20px;
+  background: #242424;
+  border: 1px solid #191919;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.symbol .symbol__chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.symbol .symbol__row-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.symbol .symbol__row-info .symbol__name {
+  width: 40%;
+  font-size: calc(100% + 20px);
+}
+
+.symbol .symbol__row-info .symbol__price {
+  width: 50%;
+  text-align: left;
+  font-size: 45px;
+  font-weight: 100;
+}
+
+.symbol .symbol__row-info .symbol__tick {
+  width: 10%;
+  text-align: right;
+  font-size: 45px;
+  font-weight: 500;
+  text-shadow: -1px 0px 6px rgba(228, 224, 224, 0.1);
+}
+
+.symbol .symbol__row-info .symbol__tick.tick-pos {
+  margin-top: -8px;
+  text-shadow: -1px 0px 6px rgba(21, 159, 73, 0.1);
+}
+
+.symbol .symbol__row-info .symbol__tick.tick-neg {
+  margin-top: -8px;
+  text-shadow: -1px 0px 6px rgba(175, 63, 61, 0.1);
+}
+
+.symbol .symbol__row-info .symbol__status {
+  display: inline-block;
+  font-size: 10px;
+}
+
+.symbol .symbol__row-info .symbol__status::before {
+  content: '';
+  display: inline-block;
+  margin-right: 4px;
+  position: relative;
+  top: -1px;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+}
+
+.symbol .symbol__row-info .symbol__status.tick-pos::before {
+  background: #159f49;
+}
+
+.symbol .symbol__row-info .symbol__status.tick-neg::before {
+  background: #af3f3d;
+}
+
+.symbol .symbol__row-info .symbol__exchange {
+  font-size: 10px;
+  margin-left: 2px;
+  color: #9d8e8e;
+}
+
+.symbol .symbol__row-info .symbol__meta {
+  display: block;
+  width: 40%;
+}
+
+.symbol .symbol__row-info .symbol__meta .symbol__meta-title {
+  display: block;
+  font-size: 10px;
+  text-align: left;
+}
+
+.symbol .symbol__row-spacer {
+  height: 50px;
+}
+
+.ticker__char-column {
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+}
+
+.char-column-enter {
+  opacity: 0;
+  width: 0;
+}
+
+.char-column-enter.char-column-enter-active {
+  width: 30px;
+  opacity: 1;
+  -webkit-transition: opacity 400ms ease-in-out, width 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out, width 400ms ease-in-out;
+}
+
+.char-column-leave {
+  opacity: 1;
+  width: 30px;
+}
+
+.char-column-leave.char-column-leave-active {
+  opacity: 0;
+  width: 0;
+  -webkit-transition: opacity 400ms ease-in-out, width 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out, width 400ms ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */

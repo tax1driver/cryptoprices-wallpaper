@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/cryptoprices-wallpaper/static/js/main.1bd40c0d.chunk.js",
+    "main.js.map": "/cryptoprices-wallpaper/static/js/main.1bd40c0d.chunk.js.map",
+    "runtime-main.js": "/cryptoprices-wallpaper/static/js/runtime-main.e51bf934.js",
+    "runtime-main.js.map": "/cryptoprices-wallpaper/static/js/runtime-main.e51bf934.js.map",
+    "static/js/2.75f1b3d3.chunk.js": "/cryptoprices-wallpaper/static/js/2.75f1b3d3.chunk.js",
+    "static/js/2.75f1b3d3.chunk.js.map": "/cryptoprices-wallpaper/static/js/2.75f1b3d3.chunk.js.map",
+    "index.html": "/cryptoprices-wallpaper/index.html",
+    "static/js/2.75f1b3d3.chunk.js.LICENSE.txt": "/cryptoprices-wallpaper/static/js/2.75f1b3d3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e51bf934.js",
+    "static/js/2.75f1b3d3.chunk.js",
+    "static/js/main.1bd40c0d.chunk.js"
+  ]
+}

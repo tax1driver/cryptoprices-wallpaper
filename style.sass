@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap');
+    
+$background: #1e1e1e
+$foreground: #e4e0e0
+
+$tick-pos: #159f49
+$tick-neg: #af3f3d
+
+html, body, #root, .app
+    padding: 0
+    margin: 0
+    width: 100%
+    height: 100%
+    background: $background
+    color: $foreground
+
+body
+    font-family: 'Lato', sans-serif
+    padding: 50px
+    box-sizing: border-box
+
+.box-vertical
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    
+.box-horizontal
+    width: 60%
+    //height: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+    flex-wrap: wrap
+
+.tick-pos
+    color: $tick-pos
+
+.tick-neg
+    color: $tick-neg
+
+.tick-zero
+    color: $foreground
+
+.break 
+    flex-basis: 100%
+    height: 0
+
+.break-gently
+    width: 100%
+    height: 0
+
+.symbol
+    width: 400px
+    height: 150px
+    padding: 15px
+    margin: 20px
+
+    background: lighten($background, 2.5%)
+    border: 1px solid darken($background, 2%)
+
+    flex-grow: 0
+    flex-shrink: 1
+
+    display: flex
+    flex-direction: column
+    //justify-content: space-around
+    flex-wrap: wrap
+
+    position: relative
+    z-index: 1
+
+    & .symbol__chart
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        z-index: -1
+
+    & .symbol__row-info
+        width: 100%
+        display: flex
+        
+        //justify-content: space-around
+        & .symbol__name
+            width: 40%
+            font-size: calc(100% + 20px)
+
+        & .symbol__price
+            width: 50%
+            text-align: left
+            font-size: 45px
+            font-weight: 100
+            
+        & .symbol__tick
+            width: 10%
+            text-align: right
+            font-size: 45px
+            font-weight: 500
+            text-shadow: -1px 0px 6px transparentize($foreground, 0.9)
+            &.tick-pos
+                margin-top: -8px
+                text-shadow: -1px 0px 6px transparentize($tick-pos, 0.9)
+            &.tick-neg
+                margin-top: -8px
+                text-shadow: -1px 0px 6px transparentize($tick-neg, 0.9)
+        & .symbol__status
+            display: inline-block
+            font-size: 10px
+            &::before
+                content: ''
+                display: inline-block
+                margin-right: 4px
+                position: relative
+                top: -1px
+                border-radius: 50%
+                width: 4px
+                height: 4px
+                
+            &.tick-pos::before
+                background: $tick-pos
+            &.tick-neg::before
+                background: $tick-neg
+            
+        & .symbol__exchange
+            font-size: 10px
+            margin-left: 2px
+            color: darken($foreground, 30%)
+        & .symbol__meta
+            display: block
+            width: 40%
+            & .symbol__meta-title
+                display: block
+                font-size: 10px
+                text-align: left
+    & .symbol__row-spacer
+        height: 50px         
+
+.ticker__char-column
+    transition: transform 400ms ease-in-out
+
+
+.char-column-enter
+    opacity: 0
+    width: 0
+
+
+.char-column-enter.char-column-enter-active
+    width: 30px
+    opacity: 1
+    transition: opacity 400ms ease-in-out, width 400ms ease-in-out
+
+
+.char-column-leave 
+    opacity: 1
+    width: 30px
+
+
+.char-column-leave.char-column-leave-active 
+    opacity: 0
+    width: 0
+    transition: opacity 400ms ease-in-out, width 400ms ease-in-out
