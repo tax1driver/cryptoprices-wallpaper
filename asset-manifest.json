@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/cryptoprices-wallpaper/static/js/main.b9bbbad6.chunk.js",
-    "main.js.map": "/cryptoprices-wallpaper/static/js/main.b9bbbad6.chunk.js.map",
+    "main.js": "/cryptoprices-wallpaper/static/js/main.b365bcb6.chunk.js",
+    "main.js.map": "/cryptoprices-wallpaper/static/js/main.b365bcb6.chunk.js.map",
     "runtime-main.js": "/cryptoprices-wallpaper/static/js/runtime-main.e51bf934.js",
     "runtime-main.js.map": "/cryptoprices-wallpaper/static/js/runtime-main.e51bf934.js.map",
     "static/js/2.0f4db539.chunk.js": "/cryptoprices-wallpaper/static/js/2.0f4db539.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.e51bf934.js",
     "static/js/2.0f4db539.chunk.js",
-    "static/js/main.b9bbbad6.chunk.js"
+    "static/js/main.b365bcb6.chunk.js"
   ]
 }
